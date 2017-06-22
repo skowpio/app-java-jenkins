@@ -17,7 +17,7 @@ public class Servlet {
             InterruptedException, ServletException {
 
         Tomcat tomcat = new Tomcat();
-        tomcat.setPort(16384);
+        tomcat.setPort(16385);
 
         Context ctx = tomcat.addContext("/", new File(".").getAbsolutePath());
 
@@ -27,7 +27,7 @@ public class Servlet {
                     throws ServletException, IOException {
                 
                 Writer w = resp.getWriter();
-                w.write("This is an example application, version 1.0.\n");
+                w.write("This is an example application built with help of Jenkins. The version of application is: 1.0.\n");
                 w.flush();
                 w.close();
             }
