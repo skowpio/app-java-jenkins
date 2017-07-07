@@ -10,7 +10,8 @@ if [ $# -eq 0 ]; then
 fi 
 
 APP_PACKAGE=${1}
-VERSION=$(echo ${APP_PACKAGE} | tr -d 'app\-jenkins\-' | tr -d 'tar.gz')
+VERSION=$(echo ${APP_PACKAGE} | awk -F'-' '{print $3}' | tr -d 'tar.gz')
+APP_NAME=$(echo ${APP_PACKAGE} | awk -F'-' '{print $1"-"$2}')
 
 INSTALL_DIR="/opt/${APP_NAME}/custom_deploy/install_dir"
 WORK_DIR="/tmp"
