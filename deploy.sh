@@ -36,8 +36,8 @@ ln -s ${INSTALL_DIR}/${VERSION} ${INSTALL_DIR}/current
 
 # unzip maven zip package
 if [ -f ${POM_VERSION_FILE} ]; then 
-  POM_VERSION=$(echo pom_version.txt)
-  unzip app-java-jenkins-${POM_VERSION}-dist.zip -d ${INSTALL_DIR}/current
+  POM_VERSION=$(cat ${POM_VERSION_FILE})
+  unzip ${INSTALL_DIR}/current/app-java-jenkins-${POM_VERSION}-dist.zip -d ${INSTALL_DIR}/current
   mv ${INSTALL_DIR}/current/app-java-jenkins-${POM_VERSION}/*.jar ${INSTALL_DIR}/current
   rm -fr ${INSTALL_DIR}/current/app-java-jenkins-${POM_VERSION}
 fi
