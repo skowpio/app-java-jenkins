@@ -10,6 +10,7 @@ import java.io.Writer;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
+import com.jcabi.manifests.Manifests;
 
 public class Servlet {
 
@@ -27,7 +28,7 @@ public class Servlet {
                     throws ServletException, IOException {
                 
                 Writer w = resp.getWriter();
-                w.write("This is an example application built with help of Jenkins. The version of application is: 1.0.\n");
+                w.write("This is an example application built with help of Jenkins. The version of application is: " + Manifests.read("Implementation-Version") + ".\n");
                 w.flush();
                 w.close();
             }
