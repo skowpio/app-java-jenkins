@@ -19,5 +19,9 @@
       <source>start.sh</source>
       <outputDirectory>/</outputDirectory>
     </file>
+    <file>
+      <source>stop.sh</source>
+      <outputDirectory>/</outputDirectory>
+    </file>
   </files>
 </assembly>
