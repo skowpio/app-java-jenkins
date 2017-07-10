@@ -13,4 +13,11 @@
       <unpack>false</unpack>
     </dependencySet>
   </dependencySets>
+  
+  <files>
+    <file>
+      <source>start.sh</source>
+      <outputDirectory>/</outputDirectory>
+    </file>
+  </files>
 </assembly>
