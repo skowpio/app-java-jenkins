@@ -10,10 +10,10 @@ mkdir -p ${INSTALL_DIR}
 unzip -q -o ${PACKAGE_PATH} -d ${INSTALL_DIR}
 
 if [ -f ${INSTALL_DIR}/current/stop.sh ]
-do
+then
 chmod 0750 ${INSTALL_DIR}/current/stop.sh
 ${INSTALL_DIR}/current/stop.sh
-done
+fi
 
 rm -f ${INSTALL_DIR}/current
 ln -s ${INSTALL_DIR}/app-java-jenkins-${POM_VERSION} ${INSTALL_DIR}/current
