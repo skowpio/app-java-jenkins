@@ -11,6 +11,7 @@ mkdir -p ${INSTALL_DIR}
 
 unzip -q -o ${PACKAGE_PATH} -d ${INSTALL_DIR}
 
-ln -fs ${INSTALL_DIR}/app-java-jenkins-${POM_VERSION} ${INSTALL_DIR}/current
+rm -f ${INSTALL_DIR}/current
+ln -s ${INSTALL_DIR}/app-java-jenkins-${POM_VERSION} ${INSTALL_DIR}/current
 
 #supervisorctl start app-jenkins-custom-deploy
