@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.Writer;
+import java.net.InetAddress;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
@@ -28,7 +29,7 @@ public class Servlet {
                     throws ServletException, IOException {
                 
                 Writer w = resp.getWriter();
-                w.write("This is an example application built with help of Jenkins. The version of application is: " + Manifests.read("Implementation-Version") + ".\n");
+                w.write("<h1>This is an example Web application built with help of Jenkins.<ul><li>The version of application is: " + Manifests.read("Implementation-Version") + "</li><li>The application has been deployed by: " + System.getProperty("deployedBy") + "</li><li>The application has been started on system user: " + System.getProperty("user.name") + "</li><li>The application runs on host: " + InetAddress.getLocalHost().getHostName() + "</li></ul></h1>\n");
                 w.flush();
                 w.close();
             }
