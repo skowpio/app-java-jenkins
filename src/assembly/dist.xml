@@ -17,11 +17,11 @@
   <files>
     <file>
       <source>start.sh</source>
-      <outputDirectory>/</outputDirectory>
+      <outputDirectory></outputDirectory>
     </file>
     <file>
       <source>stop.sh</source>
-      <outputDirectory>/</outputDirectory>
+      <outputDirectory></outputDirectory>
     </file>
   </files>
 </assembly>
