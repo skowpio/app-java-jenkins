@@ -23,5 +23,9 @@
       <source>stop.sh</source>
       <outputDirectory></outputDirectory>
     </file>
+    <file>
+      <source>super_start.sh</source>
+      <outputDirectory></outputDirectory>
+    </file>
   </files>
 </assembly>
