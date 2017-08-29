@@ -18,7 +18,6 @@ fi
 rm -f ${INSTALL_DIR}/current
 ln -s ${INSTALL_DIR}/app-java-jenkins-${POM_VERSION} ${INSTALL_DIR}/current
 
-chmod 0750 ${INSTALL_DIR}/current/start.sh
-chmod 0750 ${INSTALL_DIR}/current/stop.sh
+chmod 0750 ${INSTALL_DIR}/current/*.sh
 
 ${INSTALL_DIR}/current/start.sh $1
